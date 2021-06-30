@@ -4,11 +4,11 @@ def add():
 	account = input("Account: ")
 	username = input("Username: ")
 	password = input("Password: ")
-	with open('passwordstest.txt','a') as f:
+	with open('passwords.txt','a') as f:
 		f.write(account +"|" + username + "|" + password[::-1] + "\n")
 
 def view():
-	with open('passwordstest.txt', 'r') as f:
+	with open('passwords.txt', 'r') as f:
 		for line in f.readlines():
 			data = line.rstrip()
 			account, username, password = data.split("|")
@@ -30,3 +30,5 @@ while True:
 	else:
 		print("Incorrect Master Password.")
 		continue
+
+		
